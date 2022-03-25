@@ -1,10 +1,11 @@
 import React from 'react'
 import './subtotal.css';
 import CurrencyFormat from 'react-currency-format';
-import { SportsBasketball } from '@mui/icons-material';
+import {useStateValue} from './StateProvider';
 
 
 const Subtotal = () => {
+  const [{basket},dispatch]=useStateValue();
   return (
     <div className='subtotal'>
         <CurrencyFormat
@@ -12,7 +13,7 @@ const Subtotal = () => {
             <>
             <p>
                 {/* part of the homework */}
-                Subtotal(0 items):
+                Subtotal({basket?.length} items):
             <strong>0</strong>
             </p>
             <small className="subtotal__gift">

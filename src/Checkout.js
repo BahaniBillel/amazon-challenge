@@ -2,6 +2,7 @@ import React from "react";
 import "./checkout.css";
 import Subtotal from "./Subtotal";
 
+
 const Checkout = () => {
   return (
     <div className="checkout">
